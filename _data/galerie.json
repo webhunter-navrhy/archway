@@ -1,0 +1,101 @@
+{
+  "title": "Fotogalerie",
+  "photos": [
+    {
+      "img": "arkady",
+      "alt": "Posezení pod podloubím Velkého náměstí před restaurací Archway"
+    },
+    {
+      "img": "bar",
+      "alt": "Bar pod cihlovou klenbou s křídovou tabulí"
+    },
+    {
+      "img": "filet-mignon",
+      "alt": "Filet mignon s batátovými hranolky"
+    },
+    {
+      "img": "tabule",
+      "alt": "Slavnostně prostřená tabule v klenutém sále"
+    },
+    {
+      "img": "kozi-syr",
+      "alt": "Gratinovaný kozí sýr na listových salátech"
+    },
+    {
+      "img": "klenba",
+      "alt": "Sál s cihlovou klenbou a dřevěnými stoly"
+    },
+    {
+      "img": "ustrice",
+      "alt": "Ústřice na ledu s citronem"
+    },
+    {
+      "img": "licka",
+      "alt": "Hlavní chod s bramborovým pyré"
+    },
+    {
+      "img": "raut",
+      "alt": "Připravený raut v restauraci"
+    },
+    {
+      "img": "vitello",
+      "alt": "Vitello tonnato"
+    },
+    {
+      "img": "humri",
+      "alt": "Humři na ledu"
+    },
+    {
+      "img": "stul",
+      "alt": "Prostřený stůl u okna"
+    },
+    {
+      "img": "kachna",
+      "alt": "Hlavní chod z kuchyně Archway"
+    },
+    {
+      "img": "catering",
+      "alt": "Catering s obloženými mísami"
+    },
+    {
+      "img": "dezert",
+      "alt": "Dezert z kuchyně Archway"
+    },
+    {
+      "img": "krevety",
+      "alt": "Krevety na krémovém risottu"
+    },
+    {
+      "img": "sal",
+      "alt": "Interiér s dřevěnými stoly pod klenbou"
+    },
+    {
+      "img": "steak-noky",
+      "alt": "Steak s noky a omáčkou"
+    },
+    {
+      "img": "polevka",
+      "alt": "Polévka v hlubokém talíři"
+    },
+    {
+      "img": "tatarak",
+      "alt": "Hovězí tatarák"
+    },
+    {
+      "img": "vanocni-dezert",
+      "alt": "Sváteční dezert na břidlici"
+    },
+    {
+      "img": "rizecky",
+      "alt": "Řízečky s bramborovým salátem"
+    },
+    {
+      "img": "steak-gratin",
+      "alt": "Steak s gratinovanými bramborami"
+    },
+    {
+      "img": "kyta",
+      "alt": "Hlavní chod se zeleninou"
+    }
+  ]
+}

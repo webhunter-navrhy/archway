@@ -1,0 +1,62 @@
+{
+  "title": "Jídelní lístek",
+  "footer": "Přejeme vám dobrou chuť! Archway restaurant tým",
+  "footer_en": "Enjoy your meal! Archway restaurant team",
+  "categories": [
+    {
+      "id": "predkrmy",
+      "name": "Předkrmy",
+      "name_en": "Starters",
+      "img": "vitello",
+      "items": [
+        {"name": "Dvojitý hovězí vývar", "desc": "s kořenovou zeleninou julienne, masem a nudlemi", "name_en": "Beef consommé", "desc_en": "with root vegetables, meat and noodles", "price": "89"},
+        {"name": "Polévka denní nabídky", "desc": "", "name_en": "Daily soup", "desc_en": "", "price": "89"},
+        {"name": "Vitello tonnato", "desc": "plátky telecího masa podávané s tuňákovou majonézou, kapary, lístky polníčku a vaječný žloutek", "name_en": "Vitello tonnato", "desc_en": "slices of veal topped with tuna mayonnaise, capers, lamb’s lettuce and egg yolk", "price": "225", "img": "vitello"},
+        {"name": "Hovězí carpaccio", "desc": "lanýžový olej, strouhaný sušený žloutek, kapary, čerstvá rukola a hobliny parmezánu", "name_en": "Beef carpaccio", "desc_en": "truffle oil, dried egg yolk, capers, fresh arugula and shaved Parmesan", "price": "258"},
+        {"name": "Jemná kachní paštika se zeleným pepřem", "desc": "domácí paštika z kachních jater s kuličkami zeleného pepře, podávaná s fíkovým džemem, červenou cibulkou a lehce opečeným kváskovým chlebem s přepuštěným máslem", "name_en": "Delicate duck liver pâté with green peppercorns", "desc_en": "house-made duck liver pâté with green peppercorns, served with fig jam, red onion and lightly toasted sourdough bread with clarified butter", "price": "245"},
+        {"name": "Gratinovaný kozí sýr s medem", "desc": "variace listových salátů se sezónní zeleninou a medovým vinaigrettem, červená řepa glazovaná malinovou redukcí a pistáciovým prachem", "name_en": "Goat cheese au gratin with honey", "desc_en": "mixed leaf salad and seasonal vegetables with honey vinaigrette, beetroot glazed with raspberry reduction and ground pistachios", "price": "195", "img": "kozi-syr"},
+        {"name": "Hovězí tatarák s lanýžovou majonézou", "desc": "hovězí tatarák dochucený mořskou solí, doplněný pestem z hub shiitake a podávaný s rozpečeným bílým chlebem tramezzino s přepuštěným máslem", "name_en": "Beef tartare with truffle mayonnaise", "desc_en": "beef tartare seasoned with sea salt, served with shiitake mushroom pesto and toasted white tramezzino bread with clarified butter", "price": "235"},
+        {"name": "Carpaccio z tygřích krevet", "desc": "gratinované v koriandrovém másle, salátek z mořských řas goma wakame, salátové okurky, sezam a sweet chilli dresing", "name_en": "Tiger prawns carpaccio", "desc_en": "gratinated in coriander butter, goma wakame, cucumber and sesame, sweet chilli dressing", "price": "235"}
+      ]
+    },
+    {
+      "id": "salaty",
+      "name": "Saláty",
+      "name_en": "Salads",
+      "img": "kozi-syr",
+      "items": [
+        {"name": "Listové saláty s mozzarellou", "desc": "a granátovým jablkem, sezonní zelenina, citronový vinaigrette, bazalkové pesto", "name_en": "Mixed leaf salads with mozzarella", "desc_en": "and pomegranate, seasonal vegetables, lemon vinaigrette, basil pesto", "price": "255"},
+        {"name": "Caesar salad", "desc": "římské listy, slanina, krutony a grana padano", "name_en": "Caesar salad", "desc_en": "romaine lettuce, bacon, croutons and grana padano", "price": "195"}
+      ]
+    },
+    {
+      "id": "hlavni-chody",
+      "name": "Hlavní chody",
+      "name_en": "Main courses",
+      "img": "filet-mignon",
+      "items": [
+        {"name": "Tomatové risotto s trhanou mozzarellou", "desc": "pečenými rajčaty, parmezánem, olivovým olejem, bazalkovým pestem a microgreens", "name_en": "Tomato risotto with mozzarella", "desc_en": "roasted tomatoes, Parmesan, olive oil and microgreens", "price": "265", "tag": "Vegetariánské", "tag_en": "Vegetarian"},
+        {"name": "Grilovaný norský losos", "desc": "na vlažném salátu z černé čočky Beluga, pečené grenaille, microgreens a citronovo-máslové velouté", "name_en": "Grilled Norwegian salmon", "desc_en": "with Beluga black lentil salad, roasted grenaille potatoes, microgreens and lemon-butter velouté", "price": "425"},
+        {"name": "Butter chicken", "desc": "marinované kuřecí maso v jemné rajčatovo-smetanové omáčce s máslem, garam masalou a kardamomem, jasmínová rýže, koriandr a laccha pyaaz", "name_en": "Butter chicken", "desc_en": "marinated chicken in a creamy tomato and butter sauce with garam masala and cardamom, jasmine rice, fresh coriander and laccha pyaaz", "price": "355"},
+        {"name": "Grilovaná chobotnice", "desc": "na tomatovém risottu s kalamata olivami, rukolou a hoblinami parmezánu", "name_en": "Grilled octopus", "desc_en": "on tomato risotto with Kalamata olives, arugula and shaved Parmesan", "price": "485"},
+        {"name": "Grilovaná kotletka z přeštického prasátka", "desc": "marinovaná s tymiánem a barevným pepřem, opékané brambory s přepuštěným máslem a parmezánem, krémová omáčka z letních lanýžů", "name_en": "Grilled Přeštice pork chop (Czech Black-Spotted breed)", "desc_en": "marinated with thyme and colored pepper, roasted potatoes with clarified butter and Parmesan, creamy summer truffle sauce", "price": "495"},
+        {"name": "Rib eye steak z vyzrálého hovězího", "desc": "karamelizovaná baby hruška na másle, jemná gorgonzola omáčka s hruškovicí, opékané grenaille s tymiánem", "name_en": "Aged rib eye steak", "desc_en": "caramelized buttered pear, delicate Gorgonzola sauce with pear brandy, roasted grenaille potatoes with thyme", "price": "495"},
+        {"name": "Filet mignon", "desc": "steak z vyzrálé hovězí svíčkové, grilovaná kukuřice na přepuštěném másle s petrželkou, batátové hranolky a estragonová omáčka", "name_en": "Filet mignon", "desc_en": "aged beef tenderloin steak with tarragon sauce, grilled corn on clarified butter (ghee) with parsley and sweet potato fries", "price": "595", "img": "filet-mignon"},
+        {"name": "Black Angus burger | Double burger jalapeño", "desc": "vyzrálé hovězí maso z Black Angus v sezamové bulce s čedarem, slaninou, rajčátky, BBQ omáčkou, cibulovou marmeládou a bramborovými hranolky, bourbonová majonéza", "name_en": "Black Angus burger | Double burger jalapeño", "desc_en": "beef chuck roll in a sesame seed bun, cheddar, bacon, tomatoes, BBQ sauce, onion jam and french fries, Bourbon mayonnaise", "price": "345 / 395"},
+        {"name": "Vepřové řízečky z kotletky", "desc": "se smetanovou bramborovou kaší a salátkem s bylinkovým dresingem, ozdobené pažitkou a citronem", "name_en": "Crispy pork schnitzel", "desc_en": "mashed potatoes and salad with herb dressing, garnished with chives and lemon", "price": "320"}
+      ]
+    },
+    {
+      "id": "dezerty",
+      "name": "Dezerty",
+      "name_en": "Desserts",
+      "img": "dezert",
+      "items": [
+        {"name": "Borůvkový cheesecake", "desc": "s čerstvým ovocem a vanilkovým krémem ze zakysané smetany", "name_en": "Blueberry cheesecake", "desc_en": "with fresh fruit and vanilla sour cream", "price": "135"},
+        {"name": "Vanilkové crème brûlée se sečuánským pepřem", "desc": "s křupavým karamelem, ozdobené borůvkami a čerstvou mátou", "name_en": "Crème brûlée with Sichuan pepper", "desc_en": "with crispy caramel, garnished with blueberries and fresh mint", "price": "135"},
+        {"name": "Čokoládový fondant", "desc": "s omáčkou z malin a hoblinkami mléčné čokolády", "name_en": "Chocolate fondant", "desc_en": "with raspberry sauce and milk chocolate shavings", "price": "135"},
+        {"name": "Variace zmrzlin", "desc": "s čokoládovou polevou", "name_en": "Selection of ice creams", "desc_en": "with chocolate topping", "price": "135"}
+      ]
+    }
+  ]
+}

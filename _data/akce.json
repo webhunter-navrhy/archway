@@ -1,0 +1,13 @@
+{
+  "title": "Večírky, oslavy, firemní akce, catering",
+  "lead": "Plánujete oslavu, večírek, firemní akci a hledáte prostor? Ozvěte se nám!",
+  "types": ["Oslava", "Večírek", "Firemní akce", "Catering"],
+  "photos": ["tabule", "raut", "catering", "stul"],
+  "vouchers": {
+    "title": "Dárkové poukazy",
+    "lead": "Přemýšlíte, co darovat protějšku, známým, přátelům nebo zaměstnancům?",
+    "text": "Nabízíme dárkové poukazy na veškerou konzumaci v hodnotě:",
+    "note": "na konzumaci jídla a nápojů v Archway Restaurant",
+    "values": [500, 1000]
+  }
+}

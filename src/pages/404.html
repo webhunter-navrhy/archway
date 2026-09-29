@@ -1,0 +1,8 @@
+{# {"id": "404", "out": "404.html", "root": "/archway/", "title": "Stránka nenalezena — Archway restaurant", "desc": "Stránka nenalezena."} #}
+{% extends 'base.html' %}
+{% import 'macros.html' as m with context %}
+{% block main %}
+{% call m.page_head('Chyba 404', 'Tahle stránka tu není', 'Možná jste hledali polední menu nebo jídelní lístek.') %}
+  <div class="phead__cta"><a class="btn btn--gold" href="/archway/tydenni-menu/">Polední menu</a><a class="btn btn--line" href="/archway/">Na úvod</a></div>
+{% endcall %}
+{% endblock %}

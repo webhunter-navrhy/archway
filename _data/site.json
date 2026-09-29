@@ -1,0 +1,25 @@
+{
+  "name": "Archway restaurant",
+  "tagline": "Stylová restaurace na Velkém náměstí v samém srdci Hradce Králové",
+  "intro": "Stylová restaurace na Velkém náměstí v samém srdci Hradce Králové Vás přivítá výbornou kuchyní, příjemným posezením, výhledem na dominanty Hradce a přátelskou obsluhou.",
+  "street": "Velké náměstí 144/14a",
+  "zip": "500 03",
+  "city": "Hradec Králové",
+  "phone": "+420 773 905 875",
+  "email": "info@archwayrestaurant.cz",
+  "facebook": "https://www.facebook.com/archwayrestauranthk/",
+  "facebook_label": "Archway restaurant",
+  "instagram": "https://www.instagram.com/archwayhk/",
+  "instagram_label": "archwayhk",
+  "map_query": "Archway restaurant, Velké náměstí 144/14a, 500 03 Hradec Králové",
+  "hours_note": "Otevírací doba se může příležitostně změnit dle aktuální situace.",
+  "hours": [
+    {"label": "Po – Čt", "days": [1, 2, 3, 4], "from": "11:00", "to": "23:00"},
+    {"label": "Pátek", "days": [5], "from": "11:00", "to": "24:00"},
+    {"label": "Sobota", "days": [6], "from": "12:00", "to": "24:00"},
+    {"label": "Neděle", "days": [0], "from": "12:00", "to": "22:00"}
+  ],
+  "exceptions": [
+    {"date": "2026-09-28", "from": "12:00", "to": "23:00", "note": "Státní svátek – Den české státnosti, otevřeno od 12:00"}
+  ]
+}

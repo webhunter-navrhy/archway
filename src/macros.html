@@ -1,0 +1,128 @@
+{# Obrázek: klíč z assets/img (webp 800/1600 + rozměry) nebo cesta nahraná v administraci (img/uploads/…) #}
+{% macro pic(key, alt='', sizes_attr='100vw', cls='', eager=false) -%}
+{% if key.startswith('img/') -%}
+<img class="{{ cls }}" src="{{ root }}{{ key }}" alt="{{ alt }}" {% if not eager %}loading="lazy" {% endif %}decoding="async">
+{%- else -%}
+{% set wh = sizes[key] %}
+<img class="{{ cls }}" src="{{ root }}assets/img/{{ key }}-800.webp"{% if wh[0] >= 1000 %} srcset="{{ root }}assets/img/{{ key }}-800.webp 800w, {{ root }}assets/img/{{ key }}-1600.webp 1600w" sizes="{{ sizes_attr }}"{% endif %} width="{{ wh[0] }}" height="{{ wh[1] }}" alt="{{ alt }}" {% if eager %}fetchpriority="high"{% else %}loading="lazy"{% endif %} decoding="async">
+{%- endif %}
+{%- endmacro %}
+
+{% macro leaf(cls='leaf') -%}
+<svg class="{{ cls }}" viewBox="0 0 40 16" aria-hidden="true"><path d="M1 8C8 1 20-1 39 8 20 17 8 15 1 8z"/></svg>
+{%- endmacro %}
+
+{% macro lotus(cls='lotus') -%}
+<svg class="{{ cls }}" viewBox="{{ logo.mark.vb }}" aria-hidden="true">{{ logo.mark.body }}</svg>
+{%- endmacro %}
+
+{% macro hours_list(cls='hours') -%}
+<dl class="{{ cls }}" data-hours>
+  {% for r in site.hours %}
+  <div data-days="{{ r.days|join(',') }}"><dt>{{ r.label }}</dt><dd>{{ r.from }} – {{ r.to }}</dd></div>
+  {% endfor %}
+</dl>
+{%- endmacro %}
+
+{# Jeden den polední nabídky #}
+{% macro lunch_day(day, head=true) -%}
+<article class="lday" data-day="{{ day.date }}">
+  {% if head %}
+  <header class="lday__head">
+    <p class="lday__name">{{ day.date|wd }} <span class="lday__today">Dnes</span></p>
+    <p class="lday__date">{{ day.date|dm }}</p>
+  </header>
+  {% endif %}
+  <div class="lday__body">
+    {% if day.closed %}
+    <p class="lday__closed">{{ day.closed }}</p>
+    {% endif %}
+    {% if day.soup %}
+    <p class="lday__soup"><span class="lday__k">Polévka</span>{{ day.soup }}</p>
+    {% endif %}
+    {% for meal in day.meals %}
+    <div class="dish">
+      <span class="dish__no">{{ ['I.', 'II.', 'III.', 'IV.', 'V.'][loop.index0] }}</span>
+      <p class="dish__name">{{ meal.name }}</p>
+      <p class="dish__price">{{ meal.price|kc }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</article>
+{%- endmacro %}
+
+{% macro voucher(value, note) -%}
+<div class="voucher">
+  <div class="voucher__in">
+    {{ lotus('voucher__lotus') }}
+    <p class="voucher__k">Dárkový poukaz</p>
+    <p class="voucher__v">{{ value }}<span>&nbsp;Kč</span></p>
+    <p class="voucher__note">{{ note }}</p>
+  </div>
+</div>
+{%- endmacro %}
+
+{# Formulář — v návrhu jen ukázka, nic neodesílá #}
+{% macro reservation_form() -%}
+<form class="form" data-demo-form novalidate>
+  <p class="form__demo"><span>Ukázka</span> Formulář v návrhu zatím nic neodesílá. Rezervace vyřídíme telefonicky na {{ site.phone }}.</p>
+  <div class="form__row">
+    <label class="field"><span>Datum</span><input type="date" name="datum" required></label>
+    <label class="field"><span>Čas</span><input type="time" name="cas" step="900" required></label>
+    <label class="field field--s"><span>Počet osob</span><input type="number" name="osoby" min="1" max="60" value="2" inputmode="numeric" required></label>
+  </div>
+  <div class="form__row">
+    <label class="field"><span>Jméno</span><input type="text" name="jmeno" autocomplete="name" required></label>
+    <label class="field"><span>Telefon</span><input type="tel" name="telefon" autocomplete="tel" required></label>
+  </div>
+  <label class="field"><span>Poznámka <em>(nepovinné)</em></span><textarea name="poznamka" rows="2" placeholder="Např. dětská židlička, stůl pod podloubím…"></textarea></label>
+  <div class="form__actions">
+    <button class="btn btn--gold" type="submit">Odeslat rezervaci</button>
+    <a class="btn btn--line" href="tel:{{ site.phone|tel }}">Raději zavolat</a>
+  </div>
+  <p class="form__ok" role="status" hidden>Děkujeme! Tohle je zatím jen ukázka — v hotovém webu by teď rezervace odešla restauraci na {{ site.email }}. Do té doby prosím volejte <a href="tel:{{ site.phone|tel }}">{{ site.phone }}</a>.</p>
+</form>
+{%- endmacro %}
+
+{% macro event_form() -%}
+<form class="form" data-demo-form novalidate>
+  <p class="form__demo"><span>Ukázka</span> Formulář v návrhu zatím nic neodesílá. Poptávku zatím pošlete na {{ site.email }} nebo zavolejte.</p>
+  <fieldset class="chips">
+    <legend>Typ akce</legend>
+    {% for t in akce.types %}
+    <label><input type="radio" name="typ" value="{{ t }}"{% if loop.first %} checked{% endif %}><span>{{ t }}</span></label>
+    {% endfor %}
+  </fieldset>
+  <div class="form__row">
+    <label class="field"><span>Předpokládané datum</span><input type="date" name="datum"></label>
+    <label class="field field--s"><span>Počet hostů</span><input type="number" name="hoste" min="1" inputmode="numeric"></label>
+  </div>
+  <div class="form__row">
+    <label class="field"><span>Jméno</span><input type="text" name="jmeno" autocomplete="name" required></label>
+    <label class="field"><span>Telefon nebo e-mail</span><input type="text" name="kontakt" required></label>
+  </div>
+  <label class="field"><span>Co plánujete?</span><textarea name="zprava" rows="3"></textarea></label>
+  <div class="form__actions">
+    <button class="btn btn--gold" type="submit">Odeslat poptávku</button>
+    <a class="btn btn--line" href="mailto:{{ site.email }}?subject=Popt%C3%A1vka%20akce">Napsat e-mail</a>
+  </div>
+  <p class="form__ok" role="status" hidden>Děkujeme! Tohle je zatím jen ukázka — v hotovém webu by poptávka odešla na {{ site.email }}. Zatím prosím napište přímo na <a href="mailto:{{ site.email }}">{{ site.email }}</a> nebo volejte <a href="tel:{{ site.phone|tel }}">{{ site.phone }}</a>.</p>
+</form>
+{%- endmacro %}
+
+{# Hlavička podstránky #}
+{% macro page_head(label, title, lead='', img='', img_alt='') -%}
+<section class="phead">
+  <div class="shell phead__grid">
+    <div class="phead__text">
+      <p class="label label--gold">{{ label }}</p>
+      <h1 class="phead__title">{{ title }}</h1>
+      {% if lead %}<p class="phead__lead">{{ lead }}</p>{% endif %}
+      {% if caller %}{{ caller() }}{% endif %}
+    </div>
+    {% if img %}
+    <figure class="arch arch--phead">{{ pic(img, img_alt, '(min-width: 900px) 34vw, 70vw', 'arch__img', true) }}</figure>
+    {% endif %}
+  </div>
+</section>
+{%- endmacro %}

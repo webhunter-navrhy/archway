@@ -1,0 +1,28 @@
+{# {"id": "kariera", "out": "hledame-zamestnance/index.html", "title": "Hledáme zaměstnance — Archway restaurant, Hradec Králové", "desc": "Práce v restauraci Archway na Velkém náměstí v Hradci Králové. Aktuálně hledáme kuchaře / kuchařku na HPP."} #}
+{% extends 'base.html' %}
+{% import 'macros.html' as m with context %}
+{% block main %}
+{% call m.page_head('Práce u nás', kariera.title, kariera.lead, 'bar', 'Bar pod cihlovou klenbou') %}
+  <div class="phead__cta"><a class="btn btn--gold" href="tel:{{ kariera.phone|tel }}">Zavolat {{ kariera.phone }}</a><a class="btn btn--line" href="mailto:{{ kariera.email }}?subject=Z%C3%A1jem%20o%20pr%C3%A1ci">Napsat e-mail</a></div>
+{% endcall %}
+<section class="jobs">
+  <div class="shell shell--narrow">
+    {% for pos in kariera.positions %}
+    <article class="job rv">
+      <header class="job__head">
+        <p class="label">Hledáme kolegu i kolegyni na pozici</p>
+        <h2 class="job__title">{{ pos.title }} <span class="tag">{{ pos.type }}</span></h2>
+        <p class="job__intro">{{ pos.intro }}</p>
+      </header>
+      <div class="job__cols">
+        <div><h3 class="job__k">Co nabízíme</h3><ul class="ticks">{% for x in pos.offer %}<li>{{ x }}</li>{% endfor %}</ul></div>
+        <div><h3 class="job__k">Co od tebe očekáváme</h3><ul class="ticks">{% for x in pos.expect %}<li>{{ x }}</li>{% endfor %}</ul></div>
+      </div>
+      <footer class="job__foot">
+        <p>Ozvi se na <a class="ulink" href="tel:{{ kariera.phone|tel }}">{{ kariera.phone }}</a> nebo <a class="ulink" href="mailto:{{ kariera.email }}">{{ kariera.email }}</a>.</p>
+      </footer>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,15 @@
+{
+  "title": "Hledáme zaměstnance",
+  "lead": "Možná hledáme právě tebe a budeme rádi, když se nám ozveš.",
+  "phone": "+420 739 682 217",
+  "email": "info@archwayrestaurant.cz",
+  "positions": [
+    {
+      "title": "Kuchař / kuchařka",
+      "type": "HPP",
+      "intro": "Baví tě vaření, máš zkušenost z organizace práce v kuchyni a chceš se dál rozvíjet?",
+      "offer": ["Práce na krátký, dlouhý týden", "Platové ohodnocení dle zkušeností", "Stravování zdarma", "Přátelský kolektiv", "Zázemí restaurace na Velkém náměstí", "Nástup možný ihned"],
+      "expect": ["Praxe v oboru 2–3 roky", "Samostatnost, schopnost zorganizovat si práci", "Odpovědnost za suroviny a chod kuchyně"]
+    }
+  ]
+}

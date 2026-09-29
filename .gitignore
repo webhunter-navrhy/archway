@@ -1,0 +1,5 @@
+site/
+.serve/
+_src_old/
+__pycache__/
+.DS_Store

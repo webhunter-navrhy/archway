@@ -1,0 +1,51 @@
+{
+  "title": "Polední nabídka",
+  "from": "2026-09-28",
+  "to": "2026-10-02",
+  "note": "Polévka je v ceně menu.",
+  "footer": "Dobrou chuť!",
+  "days": [
+    {
+      "date": "2026-09-28",
+      "closed": "Státní svátek – Den české státnosti. Restaurace bude pro vás otevřena od 12:00.",
+      "soup": "",
+      "meals": []
+    },
+    {
+      "date": "2026-09-29",
+      "closed": "",
+      "soup": "Cizrnová polévka se zeleninou",
+      "meals": [
+        {"name": "Domácí sekaná plněná restovanou kapustou a vejcem, šťouchané brambory s cibulkou, salátek kyselá okurka", "price": 199},
+        {"name": "Penne rigate s grilovaným kuřetem, krémem z černého lanýže se smetanou, baby špenát a strouhaný Parmigiano Reggiano", "price": 208}
+      ]
+    },
+    {
+      "date": "2026-09-30",
+      "closed": "",
+      "soup": "Tomatová polévka s bazalkovým pestem a kuskusem",
+      "meals": [
+        {"name": "Grilovaná vepřová panenka, bramborovo-batátové pyré, restované fazolky na slanině, bourbonová pepřová omáčka", "price": 232},
+        {"name": "Valašské střapačky s uzeným masem, kysaným zelím a smaženou cibulkou", "price": 199}
+      ]
+    },
+    {
+      "date": "2026-10-01",
+      "closed": "",
+      "soup": "Zelná polévka s klobásou",
+      "meals": [
+        {"name": "Vepřová líčka na červeném víně s máslovou bramborovou kaší, červenou cibulkou a glazovanou mladou mrkvičkou", "price": 228},
+        {"name": "Kuřecí řízečky, šťouchané brambory s jarní cibulkou a salátek s bylinkovým dresingem", "price": 203}
+      ]
+    },
+    {
+      "date": "2026-10-02",
+      "closed": "",
+      "soup": "Uzený vývar s kroupami a zeleninou julienne",
+      "meals": [
+        {"name": "Grilovaný rump steak marinovaný s bylinkami a červeným vínem, opékané brambory, estragonová omáčka", "price": 238},
+        {"name": "Krůtí soté na bílém víně se smetanou, pečenými žampiony, pórkem a jasmínovou rýží", "price": 209}
+      ]
+    }
+  ]
+}
