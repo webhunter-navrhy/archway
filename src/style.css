@@ -687,3 +687,23 @@ h2 em, .h2 em, .break__title em, .intro__big em { font-style: normal; color: inh
 .mitem__desc { color: #5a5048; }
 .mbar__cats a, .nav a { min-width: 44px; }
 .footer a, .footer__col a, .drawer a, .mobbar a { min-width: 44px; justify-content: flex-start; }
+
+/* kolo 5 (3. 11.): čitelnost na PC, hero na mobilu */
+@media (min-width: 900px) {
+  :root { --body: 1.1rem; --muted: #3a332c; }
+  .nav__links a { font-size: .9rem; }
+  .hero__lead { font-size: 1.2rem; }
+  .intro__small { font-size: 1.1rem; color: #3a332c; }
+  .crow__items { font-size: 1rem; color: #3a332c; }
+  .mitem__desc { font-size: 1rem; color: #3a332c; }
+  .gifts__text p:not(.label) { font-size: 1.1rem; color: #3a332c; }
+}
+@media (hover: hover) and (pointer: fine) and (min-width: 900px) {
+  .crow { grid-template-columns: 4rem minmax(0, 1.1fr) minmax(0, 1fr) 9rem 88px; }
+  .crow__thumb { width: 88px; }
+}
+@media (max-width: 899px) {
+  .arch--hero .arch__img { object-position: 30% 60%; }
+  .arch--hero::before { background: linear-gradient(180deg, rgba(21,18,14,.8) 0%, rgba(21,18,14,.55) 30%, rgba(21,18,14,.5) 55%, rgba(21,18,14,.9) 100%); }
+  .hero__kicker { color: var(--cream); }
+}

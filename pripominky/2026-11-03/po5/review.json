@@ -1,0 +1,17 @@
+{
+  "znamka": 7,
+  "slabiny": [
+    "Na PC je text pořád malý a světlý, i když brief výslovně chce čitelnost. Týká se to perexu v hero, odstavce ve Vítejte, popisů jídel v Jídelním lístku, textu Dárkových poukazů a položek menu v hlavičce. Oprava: základní text zvětšit na 17–18 px, menu v hlavičce na 14 px, šedou na krémovém pozadí ztmavit zhruba na #3a332c. Popisy kategorií v lístku dát na 15 px a miniatury jídel zvětšit z velikosti známky na 72–96 px.",
+    "Úvod opakuje stejný text dvakrát. Perex v hero („Stylová restaurace na Velkém náměstí… výhled na dominanty Hradce a přátelská obsluha“) se doslova vrací v nadpisu i odstavci sekce Vítejte v Archway. Na mobilu je to na dvou obrazovkách po sobě. Oprava: v hero nechat jednu krátkou větu. Do Vítejte dát konkrétní obsah z podkladů (gotická klenba, salonky, polední menu od 11:00), nebo sekci zrušit a otevírací dobu s kontakty posunout hned pod hero.",
+    "Na mobilu (390 px) leží v hero nadpis „Pod oblouky“ na světlém místě fotky. Zlatý řádek s adresou nad ním má na fotce slabý kontrast. Oprava: posunout object-position fotky tak, aby pod nadpisem byla tmavá klenba, přidat spodní gradient do 70 % výšky a řádek s adresou dát krémovou barvou místo zlaté."
+  ],
+  "zavazne": [],
+  "silne": [
+    "Fotky jsou klientovy vlastní a sedí k oboru: cihlová klenba, sál, jídla. Žádné stocky, ostré, nic nepřetéká (QA na všech 6 šířkách čisté).",
+    "Logo Archway Restaurant je vlevo v hlavičce. Hlavní akce Rezervovat stůl je stále vidět a na mobilu je spodní lišta Zavolat / Polední menu / Navigovat.",
+    "Polední menu funguje: ukazuje dnešek, má záložky dnů a ceny. K tomu stav „Právě otevřeno“ a dobře vysázená otevírací doba v rezervaci.",
+    "Koncept „Pod oblouky Velkého náměstí“ vychází z názvu restaurace i z jejího prostoru. Krémové a tmavé sekce se střídají a nepůsobí to jako tmavý „luxus“ odnikud."
+  ],
+  "verdikt": "Solidní, poctivý restaurační web s klientovými fotkami a funkčním polední menu, ale na PC ještě nesplňuje požadavek na čitelnost a úvod se opakuje. Po opravě tří bodů výše (a po ověření, že hodnoty poukazů 500 a 1000 Kč jsou z podkladů klienta) je na 8.",
+  "_hash": "10e9e95b3402e01f53c0c26ce8c2f544ca308d34"
+}
