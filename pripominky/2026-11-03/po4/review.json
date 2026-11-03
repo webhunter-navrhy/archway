@@ -1,0 +1,17 @@
+{
+  "znamka": 7,
+  "slabiny": [
+    "Úvod na PC (buňka 1): nadpis „Pod oblouky Velkého náměstí“ a hlavně úvodní text pod ním leží přímo přes křídovou tabuli s nápisy („burger“ a další) a písmena se s nimi tlučou. Přitom klient zdůraznil ostrý úvod a čitelnost. Oprava: posunout výřez fotky (object-position) tak, aby text ležel na tmavém baru nebo stěně, nebo pod levých zhruba 45 % úvodu dát tmavý přechod (rgba 0,0,0,.6 → 0). Úvodní text zvětšit na 17–18 px.",
+    "Oslavy a catering (PC buňka 5, mobil buňka 6) a fotopás s lahvemi a pečivem nad nimi (PC buňka 4 dole, mobil 6): fotka bufetu je podexponovaná a zašuměná. Na mobilu jsou tak dvě třetiny obrazovky skoro černé a nadpis se objeví až úplně dole. Oprava: dát sem světlejší ostrou fotku ze sálu, třeba dlouhou prostřenou tabuli z galerie. Dekorativní pás s lahvemi zrušit a na mobilu fotku zkrátit asi na 55 % výšky obrazovky.",
+    "Jídelní lístek na PC (buňky 3–4): nad nadpisem „Od carpaccia po filet mignon“ zůstává asi 250 px prázdné béžové plochy. Popisy jídel v pravém sloupci jsou drobné (asi 12 px) a světle šedé na béžové, takže se skoro nedají číst. Oprava: mezeru zmenšit asi na 120 px, popisy dát na 15 px v tmavší hnědé (#5a5048) a převzít z mobilu malé fotky u kategorií Předkrmy, Saláty, Hlavní chody a Dezerty."
+  ],
+  "zavazne": [],
+  "silne": [
+    "Vlevo v hlavičce je ostré logo Archway a na webu jsou skutečné fotky restaurace: cihlová klenba, sál, steaky, ústřice, humři. Žádné cizí fotky z fotobank.",
+    "Polední menu je opravdu funkční: přepínání dní Po–Pá, zvýrazněný dnešek a k tomu informace „Polévka je v ceně menu“. Na mobilu je dole lišta Zavolat / Polední menu / Navigovat, což přesně sedí na to, jak lidé restauraci hledají.",
+    "Pod úvodem je hned otevírací doba se stavem „Právě otevřeno do 23:00“, telefon a adresa s odkazem na navigaci. Rezervační formulář je poctivě označený jako ukázka a vedle něj je přehledná tmavá karta s otevírací dobou.",
+    "Na mobilu je lístek s náhledy jídel, tlačítka přes celou šířku a nic nepřetéká na žádné z šesti testovaných šířek."
+  ],
+  "verdikt": "Web je korektní a upřímný redesign se skutečným obsahem a fotkami. Klientův hlavní požadavek, čitelný ostrý úvod na PC, ale shazuje text položený přes křídovou tabuli. Sekce catering a jídelní lístek působí kvůli tmavé fotce a prázdným plochám nedotaženě. Po opravě těchto tří míst (a dotykových cílů Galerie a Kontakt, které mají 38–39 px a mají mít aspoň 44) je to na 8.",
+  "_hash": "73e4dd3248cf2ad07bcff7d298c7cc363713f2b7"
+}

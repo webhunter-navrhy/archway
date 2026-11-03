@@ -670,3 +670,19 @@ h2 em, .h2 em, .break__title em, .intro__big em { font-style: normal; color: inh
 .arch--hero .arch__img { object-position: 50% 60%; }
 .footer a, .footer__col a, .drawer a, .mobbar a { display: inline-flex; align-items: center; min-height: 44px; }
 .footer__col .hours, .footer__col .hours * { min-height: 0; }
+
+/* kolo 4 (3. 11.): čitelný úvod, světlejší fotky v pásech, čitelnější lístek */
+@media (min-width: 900px) {
+  .arch--hero::before { background: linear-gradient(90deg, rgba(21,18,14,.78) 0%, rgba(21,18,14,.55) 38%, rgba(21,18,14,.1) 70%), linear-gradient(180deg, rgba(21,18,14,.55) 0%, rgba(21,18,14,.15) 35%, rgba(21,18,14,.8) 100%); }
+}
+.hero__lead { font-size: 1.1rem; }
+.break__media img { filter: brightness(1.08); }
+@media (max-width: 899px) { .break { min-height: 62svh; } }
+.carte { padding-top: clamp(3.5rem, 7vw, 6rem); }
+.crow__items { color: #5a5048; font-size: .95rem; }
+@media (hover: hover) and (pointer: fine) and (min-width: 900px) {
+  .crow { grid-template-columns: 4rem minmax(0, 1.1fr) minmax(0, 1fr) 9rem 64px; grid-template-areas: "no name items price thumb"; }
+  .crow__thumb { display: block; width: 64px; }
+}
+.mitem__desc { color: #5a5048; }
+.mbar__cats a, .nav a { min-width: 44px; }
