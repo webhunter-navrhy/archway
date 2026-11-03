@@ -647,3 +647,18 @@ em, .hero__title em, .break__title em { font-style: italic; }
 a[href^="tel:"].ulink, .drawer__addr a[href^="tel:"] { font-weight: 500; font-size: 1.1em; }
 a[href^="tel:"].ulink { color: inherit; text-decoration-thickness: 2px; }
 .btn--line[href^="tel:"] { font-weight: 500; font-size: 1rem; }
+
+/* kolo 2 (3. 11.): úvod přes celou šířku, klidnější nadpisy, větší dotykové plochy */
+.hero { position: relative; min-height: 88svh; display: flex; align-items: flex-end; padding: calc(var(--nav-h) + 2rem) 0 clamp(2.5rem, 6vw, 4.5rem); overflow: hidden; }
+.hero__grid { display: block; width: min(var(--max), 100% - 2 * var(--gutter)); position: relative; z-index: 2; }
+.hero__media { position: absolute; inset: 0; width: 100%; max-width: none; margin: 0; z-index: 0; order: 0; }
+.hero__media::before, .hero__lotus { display: none; }
+.arch--hero { position: absolute; inset: 0; height: 100%; max-width: none; margin: 0; border-radius: 0; animation: none; }
+.arch--hero .arch__img { height: 100%; }
+.arch--hero::before { background: linear-gradient(180deg, rgba(21,18,14,.35) 0%, rgba(21,18,14,.25) 40%, rgba(21,18,14,.82) 100%); z-index: 1; }
+.hero__status { top: calc(var(--nav-h) + .8rem); bottom: auto; left: auto; right: var(--gutter); translate: none; }
+.hero__title { margin-right: 0; }
+.hero__lead { color: var(--d-text); }
+h2 em, .h2 em, .break__title em, .intro__big em { font-style: normal; color: inherit; }
+.ulink { display: inline-block; padding-block: .7rem; }
+.nav__brand { min-height: 44px; display: inline-flex; align-items: center; }

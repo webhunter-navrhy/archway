@@ -19,7 +19,7 @@
   <div class="shell shell--narrow">
     {% for cat in menu.categories %}
     <section class="mcat" id="{{ cat.id }}" data-cat="{{ cat.id }}">
-      <h2 class="mcat__title rv"><span class="mcat__no">{{ '%02d' % loop.index }}</span><span class="cs">{{ cat.name }}</span><span class="en" lang="en">{{ cat.name_en }}</span></h2>
+      <h2 class="mcat__title rv"><span class="cs">{{ cat.name }}</span><span class="en" lang="en">{{ cat.name_en }}</span></h2>
       <ul class="mlist">
         {% for it in cat['items'] %}
         <li class="mitem rv{% if it.img %} mitem--img{% endif %}">

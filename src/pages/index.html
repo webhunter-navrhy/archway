@@ -25,18 +25,7 @@
       <figcaption class="hero__status"><span class="dot"></span><span data-open-status>Otevírací doba</span></figcaption>
     </figure>
   </div>
-  <a class="scrollcue" href="#vitejte" aria-label="Posunout dolů"><span></span>Dolů</a>
 </section>
-
-<div class="marquee" aria-hidden="true">
-  <div class="marquee__track">
-    {% for _ in range(2) %}
-    <div class="marquee__set">
-      <span>Polední nabídka</span>{{ m.leaf() }}<span><em>Filet mignon</em></span>{{ m.leaf() }}<span>Oslavy a firemní akce</span>{{ m.leaf() }}<span><em>Vitello tonnato</em></span>{{ m.leaf() }}<span>Catering</span>{{ m.leaf() }}<span><em>Dárkové poukazy</em></span>{{ m.leaf() }}<span>Velké náměstí 144/14a</span>{{ m.leaf() }}
-    </div>
-    {% endfor %}
-  </div>
-</div>
 
 <section class="intro" id="vitejte">
   <div class="shell intro__grid">
@@ -100,7 +89,7 @@
       {% for cat in menu.categories %}
       <li class="rv">
         <a class="crow" href="menu/#{{ cat.id }}" data-preview="assets/img/{{ cat.img }}-800.webp">
-          <span class="crow__no">{{ '%02d' % loop.index }}</span>
+          
           <span class="crow__name">{{ cat.name }}</span>
           <span class="crow__items">{% for it in cat['items'][:3] %}{{ it.name }}{% if not loop.last %} · {% endif %}{% endfor %}</span>
           <span class="crow__price">od {{ price_min(cat) }}&nbsp;Kč</span>

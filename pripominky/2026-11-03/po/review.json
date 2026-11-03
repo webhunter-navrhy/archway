@@ -1,0 +1,19 @@
+{
+  "znamka": 6,
+  "slabiny": [
+    "Zakázané AI vzory (víc než 2, a proto strop 6): pod hero na PC (buňka 2) i na mobilu (buňka 2) běží pás „Vitello tonnato – Catering – Dárkové poukazy…“, jídelní lístek čísluje kategorie 01–04, téměř každý nadpis má zlaté kurzívou zvýrazněné slovo („vaříme“, „po filet mignon“, „firemní akce“, „se sní“, „kuchyně“, „místo“, „výhled na dominanty Hradce“) a v hero je indikátor „DOLŮ“. Oprava: pás pod hero smazat, čísla 01–04 v jídelním lístku odstranit, kurzívu nechat nejvýš v H1 „Pod oblouky Velkého náměstí“, ostatní nadpisy sázet jedním řezem Jost a indikátor DOLŮ zrušit.",
+    "Hero na PC (buňka 1): levá polovina je tmavá prázdná plocha se slabou kresbou lotosu a fotka podloubí je jen malý obrázek v rámečku vpravo. Je to stejná chyba, kvůli které Rafael odmítl Rezidenci Metelka. Oprava: fotku arkád dát přes celou šířku jako pozadí s jemným ztmavením a H1 a obě tlačítka položit přes ni vlevo dole. V sekci Večírky, oslavy (PC buňka 5, mobil buňka 6) je fotka cateringu tmavá a zamlžená, nahradit ji fotkou dlouhé prostřené tabule ze sálu (galerie, prostřední sloupec) a dát jí víc jasu.",
+    "Mobil a opakování obsahu: QA hlásí 10 dotykových cílů pod 40 px („Navigovat →“ 79×25, „Celá fotogalerie →“ 126×29, „nebo zavolejte +420…“ 270×32, logo v hlavičce 204×38). Oprava: odkazy ulink dostanou padding na min. výšku 44 px. Otevírací doba je na stránce třikrát: v úvodu, v tmavé kartě u rezervace (PC buňka 8, mobil buňky 10–11) a v patičce. Kartu u rezervace nahradit fotkou sálu nebo podloubí a hodiny nechat jen v úvodním pruhu a v patičce."
+  ],
+  "zavazne": [
+    "Sekce Polední nabídka („Co dnes vaříme“, PC buňka 3, mobil buňka 4): ukazuje týden 28. 9.–2. 10., tedy přes měsíc starý, a jako „dnes“ je vybrané pondělí, kde je jen hláška o státním svátku a žádné jídlo. Hlavní každodenní funkce restaurace tak působí neaktuálně a prázdně. Napojit menu na aktuální týden a jako výchozí otevřít dnešní den s jídly, případně nejbližší den, kdy se vaří."
+  ],
+  "silne": [
+    "Na webu jsou opravdové fotky restaurace (podloubí, cihlový bar, sál, jídla), žádné cizí stocky.",
+    "Logo Archway je vlevo v hlavičce na PC i na mobilu a celé velké je i v patičce.",
+    "Hned pod hero je adresa, provozní doba, telefon a odkaz Navigovat. Na mobilu je spodní lišta Zavolat / Polední menu / Navigovat, takže kontakt je pořád po ruce.",
+    "Jedna rodina písma (Jost) s čistou diakritikou, jídelní lístek s cenami „od“ a na mobilu s fotkami jídel, formulář rezervace poctivě označený jako UKÁZKA, žádné přetékání na 6 šířkách."
+  ],
+  "verdikt": "Obsahově a po stránce kontaktů je to poctivý web restaurace s jejími vlastními fotkami a logem, ale tmavá zlatá skladba s pásem pod hero, číslováním a kurzívou v každém nadpisu působí jako šablona a stropuje známku na 6. Před odesláním opravit: odstranit vzory, udělat hero přes celou šířku a dát do poledního menu aktuální týden.",
+  "_hash": "7885d21d427d824304fbae6beaa54060aba41a59"
+}

@@ -1,0 +1,69 @@
+{
+  "url": "https://webhunter-navrhy.github.io/archway/",
+  "ok": true,
+  "chyby": [],
+  "varovani": [
+    "Dotykové cíle <40 px na mobilu: 10× (např. a.nav__brand \"\" 204×38; a.ulink \"nebo zavolejte +420 \" 270×32; a.ulink \"Celá fotogalerie →\" 126×29; a.ulink \"Navigovat →\" 79×25)"
+  ],
+  "metriky": {
+    "sirky": {
+      "1440": {
+        "scrollWidth": 1440,
+        "pocet_pretekajicich": 0
+      },
+      "1280": {
+        "scrollWidth": 1280,
+        "pocet_pretekajicich": 0
+      },
+      "1024": {
+        "scrollWidth": 1024,
+        "pocet_pretekajicich": 0
+      },
+      "820": {
+        "scrollWidth": 820,
+        "pocet_pretekajicich": 0
+      },
+      "390": {
+        "scrollWidth": 390,
+        "pocet_pretekajicich": 0
+      },
+      "360": {
+        "scrollWidth": 360,
+        "pocet_pretekajicich": 0
+      }
+    },
+    "preneseno_PC_MB": 1.76,
+    "nejvetsi_obrazek_PC": {
+      "kB": 198,
+      "url": "https://webhunter-navrhy.github.io/archway/assets/img/catering-1600.webp"
+    },
+    "snimku_PC": 9,
+    "preneseno_mobil_MB": 1.66,
+    "nejvetsi_obrazek_mobil": {
+      "kB": 111,
+      "url": "https://webhunter-navrhy.github.io/archway/assets/img/arkady-800.webp"
+    },
+    "snimku_mobil": 12,
+    "seo": {
+      "title": "Archway restaurant — restaurace na Velkém náměstí, Hradec Králové",
+      "description": "Stylová restaurace na Velkém náměstí v Hradci Králové. Polední menu, jídelní lístek, rezervace stolu",
+      "lang": "cs",
+      "h1": 1,
+      "jsonld": [
+        true
+      ],
+      "robots": "noindex, nofollow",
+      "og_image": "https://webhunter-navrhy.github.io/archway/assets/img/arkady.jpg",
+      "bez_v": [],
+      "canonical": true,
+      "viewport": true
+    },
+    "maly_dotykovy_cil": 10,
+    "font_nadpis": "Jost",
+    "font_text": "Jost",
+    "podstranky": {
+      "stranek": 8,
+      "obrazku": 46
+    }
+  }
+}
