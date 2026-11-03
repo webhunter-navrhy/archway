@@ -1,0 +1,180 @@
+{# {"id": "home", "out": "index.html", "title": "Archway restaurant — restaurace na Velkém náměstí, Hradec Králové", "desc": "Stylová restaurace na Velkém náměstí v Hradci Králové. Polední menu, jídelní lístek, rezervace stolu, oslavy, firemní akce, catering a dárkové poukazy."} #}
+{% extends 'base.html' %}
+{% import 'macros.html' as m with context %}
+{% block main %}
+
+<section class="hero">
+  <div class="hero__lotus" aria-hidden="true">{{ m.lotus() }}</div>
+  <div class="shell hero__grid">
+    <div class="hero__text">
+      <p class="label label--gold hero__kicker"><span class="rule"></span>{{ site.street }} · {{ site.city }}</p>
+      <h1 class="hero__title" aria-label="Pod oblouky Velkého náměstí">
+        <span class="w" style="--i:0">Pod</span> <span class="w" style="--i:1">oblouky</span><br>
+        <em><span class="w" style="--i:2">Velkého</span> <span class="w" style="--i:3">náměstí</span></em>
+      </h1>
+      <p class="hero__lead">{{ site.intro }}</p>
+      <div class="hero__cta">
+        <a class="btn btn--gold" href="kontakt/#rezervace">Rezervovat stůl</a>
+        <a class="btn btn--line" href="tydenni-menu/">Polední menu</a>
+      </div>
+    </div>
+    <figure class="hero__media">
+      <div class="arch arch--hero">
+        {{ m.pic('arkady', 'Posezení pod podloubím Velkého náměstí před restaurací Archway', '100vw', 'arch__img', true) }}
+      </div>
+      <figcaption class="hero__status"><span class="dot"></span><span data-open-status>Otevírací doba</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="intro" id="vitejte">
+  <div class="shell intro__grid">
+    <figure class="arch arch--intro rv">
+      {{ m.pic('bar', 'Bar pod cihlovou klenbou s křídovou tabulí', '(min-width: 900px) 30vw, 80vw', 'arch__img parallax') }}
+    </figure>
+    <div class="intro__text">
+      <p class="label rv">Vítejte v Archway</p>
+      <p class="intro__big rv">Výborná kuchyně, příjemné posezení, <em>výhled na dominanty Hradce</em> a přátelská obsluha.</p>
+      <p class="intro__small rv">Stylová restaurace na Velkém náměstí v samém srdci Hradce Králové. Přijďte na polední menu, večeři z jídelního lístku nebo s námi naplánujte oslavu.</p>
+      <div class="facts rv">
+        <div class="fact">
+          <p class="fact__k">Provozní doba</p>
+          {{ m.hours_list('hours hours--compact') }}
+        </div>
+        <div class="fact">
+          <p class="fact__k">Rezervace</p>
+          <a class="fact__big ulink" href="tel:{{ site.phone|tel }}">{{ site.phone }}</a>
+          <p class="fact__note">{{ site.hours_note }}</p>
+        </div>
+        <div class="fact">
+          <p class="fact__k">Lokalita</p>
+          <p>{{ site.street }}<br>{{ site.zip }} {{ site.city }}</p>
+          <a class="ulink" href="https://www.google.com/maps/dir/?api=1&amp;destination={{ site.map_query|urlencode }}" target="_blank" rel="noopener">Navigovat →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="lunch" id="poledne">
+  <div class="shell lunch__grid">
+    <div class="lunch__side">
+      <p class="label label--gold rv">{{ tydenni_menu.title }} · {{ tydenni_menu.from|dm }} – {{ tydenni_menu.to|dm }}</p>
+      <h2 class="h2 rv">Co dnes <em>vaříme</em></h2>
+      <div class="daytabs rv" role="tablist" aria-label="Dny v týdnu">
+        {% for day in tydenni_menu.days %}
+        <button type="button" role="tab" class="daytab" data-tab="{{ day.date }}" aria-selected="{{ 'true' if loop.first else 'false' }}"><b>{{ day.date|wdk }}</b><span>{{ day.date|dm }}</span></button>
+        {% endfor %}
+      </div>
+      <p class="lunch__note rv">{{ tydenni_menu.note }}</p>
+      <a class="ulink ulink--light rv" href="tydenni-menu/">Celá týdenní nabídka →</a>
+    </div>
+    <div class="lunch__board rv" data-daypanels>
+      {% for day in tydenni_menu.days %}
+      <div class="lunch__panel" data-panel="{{ day.date }}"{% if not loop.first %} hidden{% endif %}>
+        {{ m.lunch_day(day) }}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="carte" id="listek">
+  <div class="shell">
+    <div class="carte__head">
+      <p class="label rv">Jídelní lístek</p>
+      <h2 class="h2 rv">Od carpaccia <em>po filet mignon</em></h2>
+    </div>
+    <ul class="carte__list" data-preview-list>
+      {% for cat in menu.categories %}
+      <li class="rv">
+        <a class="crow" href="menu/#{{ cat.id }}" data-preview="assets/img/{{ cat.img }}-800.webp">
+          
+          <span class="crow__name">{{ cat.name }}</span>
+          <span class="crow__items">{% for it in cat['items'][:3] %}{{ it.name }}{% if not loop.last %} · {% endif %}{% endfor %}</span>
+          <span class="crow__price">od {{ price_min(cat) }}&nbsp;Kč</span>
+          <span class="crow__thumb">{{ m.pic(cat.img, '', '80px') }}</span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+    <div class="carte__foot rv">
+      <a class="btn btn--dark" href="menu/">Celý jídelní lístek</a>
+      <p>Lístek je i v angličtině — <a class="ulink" href="menu/?lang=en">English menu</a></p>
+    </div>
+  </div>
+  <div class="preview" aria-hidden="true" data-preview-el><img alt=""></div>
+</section>
+
+<section class="break">
+  <div class="break__media">{{ m.pic('catering', '', '100vw', 'parallax-lg') }}</div>
+  <div class="shell break__content">
+    <p class="label label--gold rv">Soukromé akce</p>
+    <h2 class="break__title rv">Večírky, oslavy,<br><em>firemní akce</em> a catering</h2>
+    <p class="break__lead rv">{{ akce.lead }}</p>
+    <a class="btn btn--gold rv" href="oslavy-a-akce/#poptavka">Poptat akci</a>
+  </div>
+</section>
+
+<section class="gifts">
+  <div class="shell gifts__grid">
+    <div class="gifts__text">
+      <p class="label rv">{{ akce.vouchers.title }}</p>
+      <h2 class="h2 rv">Dárek, který <em>se sní</em></h2>
+      <p class="rv">{{ akce.vouchers.lead }} {{ akce.vouchers.text }}</p>
+      <div class="gifts__cta rv">
+        <a class="btn btn--dark" href="mailto:{{ site.email }}?subject=D%C3%A1rkov%C3%BD%20poukaz">Objednat poukaz</a>
+        <a class="ulink" href="tel:{{ site.phone|tel }}">nebo zavolejte {{ site.phone }}</a>
+      </div>
+    </div>
+    <div class="gifts__cards rv">
+      {% for val in akce.vouchers['values'] %}{{ m.voucher(val, akce.vouchers.note) }}{% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="gal">
+  <div class="shell">
+    <div class="gal__head">
+      <h2 class="h2 rv">Z naší <em>kuchyně</em> a sálu</h2>
+      <a class="ulink ulink--light rv" href="fotogalerie/">Celá fotogalerie →</a>
+    </div>
+    <div class="bento">
+      {% for key, alt in [('klenba', 'Sál s cihlovou klenbou'), ('filet-mignon', 'Filet mignon s batátovými hranolky'), ('ustrice', 'Ústřice na ledu'), ('tabule', 'Slavnostně prostřená tabule'), ('kozi-syr', 'Gratinovaný kozí sýr'), ('humri', 'Humři na ledu'), ('stul', 'Prostřený stůl u okna')] %}
+      <a class="bento__item rv" href="fotogalerie/" style="--d:{{ [3,0,5,1,6,2,4][loop.index0] }}">{{ m.pic(key, alt, '(min-width: 900px) 25vw, 50vw') }}</a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="rezervace">
+  <div class="shell visit__grid">
+    <div class="visit__form">
+      <p class="label rv">Rezervace stolu</p>
+      <h2 class="h2 rv">Podržíme vám <em>místo</em></h2>
+      <p class="visit__lead rv">Nejrychleji to vyřídíte telefonem na <a class="ulink" href="tel:{{ site.phone|tel }}">{{ site.phone }}</a>.</p>
+      <div class="rv">{{ m.reservation_form() }}</div>
+    </div>
+    <aside class="clock rv">
+      <p class="label label--gold">Otevírací doba</p>
+      <p class="clock__status" data-open-status>Otevírací doba</p>
+      <dl class="clock__list" data-hours>
+        {% for r in site.hours %}
+        <div data-days="{{ r.days|join(',') }}"><dt>{{ r.label }}</dt><dd>{{ r.from[:2]|int }}<sup>{{ r.from[3:] }}</sup><i>–</i>{{ r.to[:2]|int }}<sup>{{ r.to[3:] }}</sup></dd></div>
+        {% endfor %}
+      </dl>
+      <p class="clock__note">{{ site.hours_note }}</p>
+    </aside>
+  </div>
+  <div class="shell">
+    <div class="map rv">
+      <iframe title="Mapa — Archway restaurant, Velké náměstí 144/14a" src="https://maps.google.com/maps?q={{ site.map_query|urlencode }}&amp;z=17&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="map__card">
+        <p class="map__name">Archway restaurant</p>
+        <p>{{ site.street }}<br>{{ site.zip }} {{ site.city }}</p>
+        <a class="ulink" href="https://www.google.com/maps/dir/?api=1&amp;destination={{ site.map_query|urlencode }}" target="_blank" rel="noopener">Navigovat →</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

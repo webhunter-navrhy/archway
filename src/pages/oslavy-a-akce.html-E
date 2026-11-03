@@ -1,0 +1,45 @@
+{# {"id": "akce", "out": "oslavy-a-akce/index.html", "title": "Oslavy, firemní akce a catering — Archway restaurant", "desc": "Večírky, oslavy, firemní akce a catering v restauraci Archway na Velkém náměstí v Hradci Králové. Dárkové poukazy v hodnotě 500 a 1000 Kč."} #}
+{% extends 'base.html' %}
+{% import 'macros.html' as m with context %}
+{% block main %}
+{% call m.page_head('Soukromé akce', 'Oslavy, večírky, firemní akce, catering', akce.lead, 'tabule', 'Slavnostně prostřená tabule v klenutém sále') %}
+  <div class="phead__cta"><a class="btn btn--gold" href="#poptavka">Poptat akci</a><a class="btn btn--line" href="tel:{{ site.phone|tel }}">{{ site.phone }}</a></div>
+{% endcall %}
+<section class="events">
+  <div class="shell events__grid">
+    <ul class="events__types">
+      {% for t in akce.types %}<li class="rv"><span class="events__no">{{ '%02d' % loop.index }}</span>{{ t }}</li>{% endfor %}
+    </ul>
+    <div class="events__photos">
+      <figure class="events__ph events__ph--a rv">{{ m.pic('raut', 'Připravený raut v restauraci', '(min-width: 900px) 30vw, 60vw') }}</figure>
+      <figure class="events__ph events__ph--b rv">{{ m.pic('catering', 'Catering s obloženými mísami', '(min-width: 900px) 24vw, 50vw') }}</figure>
+    </div>
+  </div>
+</section>
+<section class="visit visit--events" id="poptavka">
+  <div class="shell visit__grid">
+    <div class="visit__form">
+      <p class="label rv">Poptávka akce</p>
+      <h2 class="h2 rv">Napište nám, <em>co plánujete</em></h2>
+      <div class="rv">{{ m.event_form() }}</div>
+    </div>
+    <figure class="arch arch--side rv">{{ m.pic('stul', 'Prostřený stůl u okna', '(min-width: 900px) 30vw, 80vw', 'arch__img') }}</figure>
+  </div>
+</section>
+<section class="gifts" id="poukazy">
+  <div class="shell gifts__grid">
+    <div class="gifts__text">
+      <p class="label rv">{{ akce.vouchers.title }}</p>
+      <h2 class="h2 rv">Dárek, který <em>se sní</em></h2>
+      <p class="rv">{{ akce.vouchers.lead }} {{ akce.vouchers.text }}</p>
+      <div class="gifts__cta rv">
+        <a class="btn btn--dark" href="mailto:{{ site.email }}?subject=D%C3%A1rkov%C3%BD%20poukaz">Objednat poukaz</a>
+        <a class="ulink" href="tel:{{ site.phone|tel }}">nebo zavolejte {{ site.phone }}</a>
+      </div>
+    </div>
+    <div class="gifts__cards rv">
+      {% for val in akce.vouchers['values'] %}{{ m.voucher(val, akce.vouchers.note) }}{% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

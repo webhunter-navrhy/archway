@@ -1,0 +1,19 @@
+{
+  "znamka": 5,
+  "slabiny": [
+    "Úvod na PC (1440 px, buňka 1): fotka není přes celou šířku. Sedí v rámečku s tmavými pruhy nahoře i po stranách, arkady-800 je roztažená 1,65× a menší fotka baru překrývá tlačítka Rezervovat stůl / Polední menu. Oprava: hero udělat jako jednu fotku přes celou šířku (100vw × asi 90vh) se srcset arkady-1600/2400, překrývající fotku baru odstranit a text s CTA dát vlevo dole na tmavý přechod.",
+    "Nadpisy na PC: v úvodu je „Velkého náměstí“ zlatou kurzívou a v sekcích „Co dnes vaříme“ a „Z naší kuchyně a sálu“ jsou zlatá zvýrazněná slova. To je zakázaný vzor zvýrazněného slova a navíc se to liší od mobilu, kde je úvod bílý a bez kurzívy. Oprava: zvýraznění zrušit všude, nadpisy jednou barvou v Jost 400 stejně jako na mobilu.",
+    "Polední nabídka (PC buňka 3, mobil 3–4): ukazuje týden 28. 9. – 2. 10. a v pondělí je jen hláška o státním svátku, takže 3. 11. působí web zastarale a sekce je skoro prázdná. Oprava: naplnit ji aktuálním týdnem (3.–7. 11.) z jejich menu a jako výchozí den otevřít dnešek. Zároveň zvětšit 6 odkazů s výškou 22 px (Polední menu, Jídelní lístek, Oslavy a catering, Galerie…) na mobilu na aspoň 44 px (padding 11px 0)."
+  ],
+  "zavazne": [
+    "Úvod na PC (buňka 1): rozbitá skladba. Fotka v rámečku místo přes celou šířku, druhá fotka přetéká přes CTA tlačítka a QA hlásí roztaženou fotku arkady-800.webp (800 px vykresleno na 1320 px, 1,65×). Klient to uvidí jako první obrazovku."
+  ],
+  "silne": [
+    "Vlastní fotky restaurace: klenby, cihlový bar, dlouhá tabule, steak, ústřice. Pozná se konkrétní místo, žádné cizí stocky.",
+    "Logo Archway vlevo v hlavičce, na PC je CTA Rezervovat stůl stále vidět a na mobilu je dolní lišta Zavolat / Polední menu / Navigovat. Kontakt je na dosah odkudkoli.",
+    "Užitečný obsah pro restauraci: otevírací doba s „Právě otevřeno“, jídelní lístek s cenami, dárkové poukazy, mapa, rezervace a formulář poctivě označený jako UKÁZKA.",
+    "Mobil vypadá jako navržený pro telefon: úvod přes celou šířku s čitelným textem, nic nepřetéká na 390 ani 360 px, celý web má jedno písmo (Jost)."
+  ],
+  "verdikt": "Na mobilu je web skoro hotový, ale úvod na PC je pořád rozbitý: rámeček, překrývající fotka a roztažená fotka. Přesně tohle měla oprava „úvod přes celou šířku“ vyřešit. Před odesláním opravit úvod na PC, zrušit zlatá a kurzívou zvýrazněná slova v nadpisech a dát do polední nabídky aktuální týden.",
+  "_hash": "63d40eb42fbea00439246b1d242edb74203c81b1"
+}

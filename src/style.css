@@ -91,8 +91,6 @@ button, input, textarea, select { font: inherit; color: inherit; }
   letter-spacing: -.025em;
   text-wrap: balance;
 }
-.h2 em, .hero__title em, .intro__big em, .break__title em, .phead__title em { color: var(--gold-deep); }
-.lunch .h2 em, .gal .h2 em, .hero__title em, .break__title em { color: var(--gold); }
 
 .ulink {
   background: linear-gradient(currentColor, currentColor) 0 100% / 100% 1px no-repeat;
@@ -667,3 +665,8 @@ h2 em, .h2 em, .break__title em, .intro__big em { font-style: normal; color: inh
 .hero__title em { font-style: normal; color: inherit; }
 @media (min-width: 900px) { .arch--intro { margin-top: 0; } .intro__text { padding-top: clamp(1rem, 3vw, 3rem); } }
 .arch--hero::before { background: linear-gradient(180deg, rgba(21,18,14,.72) 0%, rgba(21,18,14,.3) 22%, rgba(21,18,14,.3) 45%, rgba(21,18,14,.85) 100%); }
+
+/* kolo 3 (3. 11.): úvod z ostré fotky 1920 px, větší dotykové plochy v patičce */
+.arch--hero .arch__img { object-position: 50% 60%; }
+.footer a, .footer__col a, .drawer a, .mobbar a { display: inline-flex; align-items: center; min-height: 44px; }
+.footer__col .hours, .footer__col .hours * { min-height: 0; }

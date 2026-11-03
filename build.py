@@ -113,5 +113,8 @@ if (OUT / 'img').exists():
     imgs += sorted(str(f.relative_to(OUT)) for f in (OUT / 'img').rglob('*') if f.is_file())
 (OUT / 'images.json').write_text(json.dumps(imgs, ensure_ascii=False))
 (OUT / 'version.json').write_text(json.dumps({'sha': os.environ.get('GITHUB_SHA', 'local')}))
+if (OUT / 'admin/index.html').exists():
+    ai = OUT / 'admin/index.html'
+    ai.write_text(ai.read_text().replace('__V_ACSS__', h('admin/admin.css')).replace('__V_AJS__', h('admin/admin.js')))
 (OUT / 'robots.txt').write_text('User-agent: *\nDisallow: /\n')
 (OUT / '.nojekyll').touch()

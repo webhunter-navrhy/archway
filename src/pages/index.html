@@ -10,7 +10,7 @@
       <p class="label label--gold hero__kicker"><span class="rule"></span>{{ site.street }} · {{ site.city }}</p>
       <h1 class="hero__title" aria-label="Pod oblouky Velkého náměstí">
         <span class="w" style="--i:0">Pod</span> <span class="w" style="--i:1">oblouky</span><br>
-        <em><span class="w" style="--i:2">Velkého</span> <span class="w" style="--i:3">náměstí</span></em>
+        <span class="w" style="--i:2">Velkého</span> <span class="w" style="--i:3">náměstí</span>
       </h1>
       <p class="hero__lead">{{ site.intro }}</p>
       <div class="hero__cta">
@@ -20,7 +20,7 @@
     </div>
     <figure class="hero__media">
       <div class="arch arch--hero">
-        {{ m.pic('arkady', 'Posezení pod podloubím Velkého náměstí před restaurací Archway', '100vw', 'arch__img', true) }}
+        <img class="arch__img" src="{{ root }}assets/img/bar-1600.webp" srcset="{{ root }}assets/img/bar-800.webp 800w, {{ root }}assets/img/bar-1600.webp 1600w, {{ root }}assets/img/bar-1920.webp 1920w" sizes="100vw" width="1920" height="1440" alt="Sál restaurace Archway pod cihlovou klenbou s barem a dřevěnými stoly" fetchpriority="high" decoding="async">
       </div>
       <figcaption class="hero__status"><span class="dot"></span><span data-open-status>Otevírací doba</span></figcaption>
     </figure>
@@ -30,11 +30,11 @@
 <section class="intro" id="vitejte">
   <div class="shell intro__grid">
     <figure class="arch arch--intro rv">
-      {{ m.pic('bar', 'Bar pod cihlovou klenbou s křídovou tabulí', '(min-width: 900px) 30vw, 80vw', 'arch__img parallax') }}
+      {{ m.pic('klenba', 'Klenutý sál restaurace Archway', '(min-width: 900px) 30vw, 80vw', 'arch__img parallax') }}
     </figure>
     <div class="intro__text">
       <p class="label rv">Vítejte v Archway</p>
-      <p class="intro__big rv">Výborná kuchyně, příjemné posezení, <em>výhled na dominanty Hradce</em> a přátelská obsluha.</p>
+      <p class="intro__big rv">Výborná kuchyně, příjemné posezení, výhled na dominanty Hradce a přátelská obsluha.</p>
       <p class="intro__small rv">Stylová restaurace na Velkém náměstí v samém srdci Hradce Králové. Přijďte na polední menu, večeři z jídelního lístku nebo s námi naplánujte oslavu.</p>
       <div class="facts rv">
         <div class="fact">
@@ -60,7 +60,7 @@
   <div class="shell lunch__grid">
     <div class="lunch__side">
       <p class="label label--gold rv">{{ tydenni_menu.title }} · {{ tydenni_menu.from|dm }} – {{ tydenni_menu.to|dm }}</p>
-      <h2 class="h2 rv">Co dnes <em>vaříme</em></h2>
+      <h2 class="h2 rv">Co dnes vaříme</h2>
       <div class="daytabs rv" role="tablist" aria-label="Dny v týdnu">
         {% for day in tydenni_menu.days %}
         <button type="button" role="tab" class="daytab" data-tab="{{ day.date }}" aria-selected="{{ 'true' if loop.first else 'false' }}"><b>{{ day.date|wdk }}</b><span>{{ day.date|dm }}</span></button>
@@ -83,7 +83,7 @@
   <div class="shell">
     <div class="carte__head">
       <p class="label rv">Jídelní lístek</p>
-      <h2 class="h2 rv">Od carpaccia <em>po filet mignon</em></h2>
+      <h2 class="h2 rv">Od carpaccia po filet mignon</h2>
     </div>
     <ul class="carte__list" data-preview-list>
       {% for cat in menu.categories %}
@@ -110,7 +110,7 @@
   <div class="break__media">{{ m.pic('catering', '', '100vw', 'parallax-lg') }}</div>
   <div class="shell break__content">
     <p class="label label--gold rv">Soukromé akce</p>
-    <h2 class="break__title rv">Večírky, oslavy,<br><em>firemní akce</em> a catering</h2>
+    <h2 class="break__title rv">Večírky, oslavy,<br>firemní akce a catering</h2>
     <p class="break__lead rv">{{ akce.lead }}</p>
     <a class="btn btn--gold rv" href="oslavy-a-akce/#poptavka">Poptat akci</a>
   </div>
@@ -120,7 +120,7 @@
   <div class="shell gifts__grid">
     <div class="gifts__text">
       <p class="label rv">{{ akce.vouchers.title }}</p>
-      <h2 class="h2 rv">Dárek, který <em>se sní</em></h2>
+      <h2 class="h2 rv">Dárek, který se sní</h2>
       <p class="rv">{{ akce.vouchers.lead }} {{ akce.vouchers.text }}</p>
       <div class="gifts__cta rv">
         <a class="btn btn--dark" href="mailto:{{ site.email }}?subject=D%C3%A1rkov%C3%BD%20poukaz">Objednat poukaz</a>
@@ -136,7 +136,7 @@
 <section class="gal">
   <div class="shell">
     <div class="gal__head">
-      <h2 class="h2 rv">Z naší <em>kuchyně</em> a sálu</h2>
+      <h2 class="h2 rv">Z naší kuchyně a sálu</h2>
       <a class="ulink ulink--light rv" href="fotogalerie/">Celá fotogalerie →</a>
     </div>
     <div class="bento">
@@ -151,7 +151,7 @@
   <div class="shell visit__grid">
     <div class="visit__form">
       <p class="label rv">Rezervace stolu</p>
-      <h2 class="h2 rv">Podržíme vám <em>místo</em></h2>
+      <h2 class="h2 rv">Podržíme vám místo</h2>
       <p class="visit__lead rv">Nejrychleji to vyřídíte telefonem na <a class="ulink" href="tel:{{ site.phone|tel }}">{{ site.phone }}</a>.</p>
       <div class="rv">{{ m.reservation_form() }}</div>
     </div>
