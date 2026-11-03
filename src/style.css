@@ -686,3 +686,4 @@ h2 em, .h2 em, .break__title em, .intro__big em { font-style: normal; color: inh
 }
 .mitem__desc { color: #5a5048; }
 .mbar__cats a, .nav a { min-width: 44px; }
+.footer a, .footer__col a, .drawer a, .mobbar a { min-width: 44px; justify-content: flex-start; }
