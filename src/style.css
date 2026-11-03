@@ -662,3 +662,8 @@ a[href^="tel:"].ulink { color: inherit; text-decoration-thickness: 2px; }
 h2 em, .h2 em, .break__title em, .intro__big em { font-style: normal; color: inherit; }
 .ulink { display: inline-block; padding-block: .7rem; }
 .nav__brand { min-height: 44px; display: inline-flex; align-items: center; }
+.hero__grid { position: static; }
+.hero__text { padding-bottom: 0; }
+.hero__title em { font-style: normal; color: inherit; }
+@media (min-width: 900px) { .arch--intro { margin-top: 0; } .intro__text { padding-top: clamp(1rem, 3vw, 3rem); } }
+.arch--hero::before { background: linear-gradient(180deg, rgba(21,18,14,.72) 0%, rgba(21,18,14,.3) 22%, rgba(21,18,14,.3) 45%, rgba(21,18,14,.85) 100%); }

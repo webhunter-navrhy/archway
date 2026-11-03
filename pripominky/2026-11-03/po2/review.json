@@ -1,0 +1,23 @@
+{
+  "znamka": 6,
+  "slabiny": [
+    "Úvod (PC 1440 i mobil 390): v posledním commitu je „úvod přes celou šířku“, ale fotka podloubí je pořád rámeček s okraji. Nad ní je zhruba 40 % prázdné tmavé plochy a do spodní hrany zasahuje druhá fotka (bar), která se tlačí na tlačítka REZERVOVAT STŮL / POLEDNÍ MENU. Oprava: dát fotku arkád přes celou šířku a výšku obrazovky (100vw × 100svh, object-fit: cover) ve zdroji alespoň 1920 px, nadpis a perex položit na tmavý přechod zdola, odstranit prázdný pruh nahoře a překrývající se fotku baru přesunout až do sekce Vítejte.",
+    "Nadpisy v celém webu: zvýrazněné slovo pořád zůstává. V úvodu je „Velkého náměstí“ zlatou kurzívou a v sekcích „Co dnes vaříme“ a „Z naší kuchyně a sálu“ jsou zlatá slova. K tomu každá sekce začíná drobným zlatým nadpiskem verzálkami s prostrkáním, což je šablonový vzor. Oprava: nadpisy jednobarevně v Jost 400 bez kurzívy, zlatou nechat jen na tlačítku Rezervovat a na otevírací době a nadpisky zrušit nebo nechat nejvýš u dvou sekcí (Polední nabídka, Rezervace).",
+    "Polední nabídka (PC buňka 3, mobil 3–4): ukazuje týden 28. 9. – 2. 10. s pondělním státním svátkem, ale dnes je 3. 11. Panel dne je skoro prázdný a na PC je vedle něj velká mrtvá plocha. Oprava: nahrát aktuální týden z klientova menu (nebo ho jasně označit jako ukázku), jako výchozí den dát běžný den s polévkou a 3–4 jídly s cenami a na PC zúžit layout, aby se panel s jídly a výběr dnů vešly do jedné vyvážené řady. U jídelního lístku na PC doplnit náhledové fotky jako na mobilu."
+  ],
+  "zavazne": [
+    "Mobil 390 px, úvod: štítek „Právě otevřeno · do 23:00“ leží přímo přes nadpis „Velkého náměstí“ a slova se překrývají. Štítek je potřeba přesunout pod tlačítka nebo nad nadpisek s adresou.",
+    "Úvod na PC: fotka arkady-800.webp je roztažená 1,65× (800 px vykreslených na 1320 px, chyba v QA), takže hlavní obraz webu je rozmazaný. Je potřeba nasadit zdroj v rozlišení 1600–2400 px přes srcset.",
+    "Úvod na PC i mobilu: perex „Stylová restaurace na Velkém náměstí…“ je bílé tenké písmo přímo na pestré fotce bez ztmavení, takže je špatně čitelný. Pod text je potřeba dát tmavý přechod nebo ho přesunout mimo fotku.",
+    "Úvod: úprava „přes celou šířku“ z připomínek není na živém webu splněná, úvod je pořád v rámečku s okraji. Klient uvidí, že se jeho připomínka nepromítla."
+  ],
+  "silne": [
+    "Logo Archway je vlevo v hlavičce, ostré, a hlavička s tlačítkem Rezervovat stůl je čistá na PC i mobilu.",
+    "Výborná konverze na mobilu: spodní lišta Zavolat / Polední menu / Navigovat, telefon u rezervace, v patičce i u poukazů a otevírací doba s živým stavem „Právě otevřeno“.",
+    "Klientovy vlastní fotky sklepních kleneb, dlouhé tabule a jídel sedí k podniku. Galerie je pěkně poskládaná a dokládá atmosféru „pod oblouky“.",
+    "Žádná vymyšlená čísla: hodnocení je přímo z Google Maps a ukázkový rezervační formulář je poctivě označený jako UKÁZKA.",
+    "Jeden font (Jost), na žádné šířce nic nepřetéká a stránka je dobře strukturovaná (menu, lístek, akce, poukazy, galerie, rezervace, mapa)."
+  ],
+  "verdikt": "Obsahově a konverzně je web solidní a stojí na skutečných fotkách podniku. Úvod ale nesplňuje hlavní připomínku (přes celou šířku), na mobilu má překrytý nadpis a rozmazanou roztaženou fotku, a tmavá paleta se zlatým zvýrazněním slov pořád působí jako šablona. Verdikt: opravit, zatím neposílat.",
+  "_hash": "86609ee4029abba5db458883a7a8ce8ee2075100"
+}
